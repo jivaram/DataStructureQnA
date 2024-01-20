@@ -11,7 +11,6 @@ func rotateNuberNTimes(A: [Int], K: Int) -> [Int] {
     }
     return result
 }
-
 func roteteSingleTime(A: [Int]) ->  [Int]{
     var newArray = Array<Int>(repeating: 0, count: A.count)
     for i in 0..<A.count - 1 {
@@ -20,7 +19,23 @@ func roteteSingleTime(A: [Int]) ->  [Int]{
     newArray[0] = A.last!
     return newArray
 }
+//
+//print(rotateNuberNTimes(A: a, K: 1))
+//print(rotateNuberNTimes(A: a, K: 2))
+//print(rotateNuberNTimes(A: a, K: 3))
 
-print(rotateNuberNTimes(A: a, K: 1))
-print(rotateNuberNTimes(A: a, K: 2))
-print(rotateNuberNTimes(A: a, K: 3))
+func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+    var result:[Int] = []
+   
+    for i in 0..<nums.count - 1 {
+        if target == nums[i] + nums[i+1] {
+            result.append(i)
+            result.append(i+1)
+            return result
+        }
+    }
+    return result
+}
+
+var newArray = [1,2,3,3]
+print(twoSum(newArray, 6))
